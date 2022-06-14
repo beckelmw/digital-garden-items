@@ -4,9 +4,14 @@
   "description": "Bill Beckelman's digital garden",
   "type": "module",
   "scripts": {
-    "build:search": "node -r dotenv/config ./build/search.js",
-    "build:site": "node -r dotenv/config ./build/site.js",
-    "build:sitemap": "node -r dotenv/config ./build/sitemap.js"
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:search": "node -r dotenv/config ./build/search.js",
+    "dev:site": "node -r dotenv/config ./build/site.js",
+    "dev:sitemap": "node -r dotenv/config ./build/sitemap.js",
+    "build": "concurrently \"npm:build:*\"",
+    "build:search": "NODE_ENV=production node -r dotenv/config ./build/search.js",
+    "build:site": "NODE_ENV=production node -r dotenv/config ./build/site.js",
+    "build:sitemap": "NODE_ENV=production node -r dotenv/config ./build/sitemap.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,7 @@
   },
   "homepage": "https://beckelman.org",
   "devDependencies": {
+    "concurrently": "^7.2.1",
     "dotenv": "^16.0.0",
     "globby": "^13.1.1",
     "got": "^12.0.1",
