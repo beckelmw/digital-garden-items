@@ -96,3 +96,12 @@ print(a.symmetric_difference(b))
 print(a.difference(b))
 print(a.union(b))
 ```
+
+## pyenv
+
+```bash
+$ pyenv install 3.10.4
+$ pyenv shell 3.10.4
+$ python -m venv venv
+$ source venv/bin/activate
+```
