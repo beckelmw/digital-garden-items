@@ -4,6 +4,22 @@ url: /code/python
 description: Python notes
 ---
 
+## Strings
+```python
+r'some raw string \b' # slash will print as r'' is raw string
+
+'''
+multiline string
+due to triple quotes
+'''
+
+f'Hi {name}' # format strings will substitute variables
+```
+
+- strings support slicing `str[start:end]`
+- `len` function can be use to get string length
+
+
 ## Match
 A match statement takes an expression and compares its value to successive patterns given as one or more case blocks.
 
